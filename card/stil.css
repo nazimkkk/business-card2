@@ -1,0 +1,16 @@
+.card{
+    width: 500px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #ddebf8;
+    border-bottom: 5px solid #d8cefe;
+    color: #2b2839;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.steph{
+    width: 200px;
+}
+

